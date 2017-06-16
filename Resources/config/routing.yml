@@ -1,0 +1,10 @@
+admin_index:
+    path:     /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: admin_dashboard
+
+admin_dashboard:
+    path:     /dashboard
+    methods:  [GET]
+    defaults: { _controller: AdminBundle:Dashboard:index }

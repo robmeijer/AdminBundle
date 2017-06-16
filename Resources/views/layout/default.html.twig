@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin - {% block title '' %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="{{ asset('bundles/admin/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{ asset('bundles/admin/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/admin/dist/css/skins/skin-purple.min.css') }}">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition skin-purple fixed">
+<div class="wrapper">
+    {% include '@Admin/partial/main_header.html.twig' %}
+    {% include '@Admin/partial/main_sidebar.html.twig' %}
+
+    <div class="content-wrapper">
+        {% block content '' %}
+    </div>
+
+    {% include '@Admin/partial/main_footer.html.twig' %}
+
+    {% include '@Admin/partial/control_sidebar.html.twig' %}
+    <div class="control-sidebar-bg"></div>
+</div>
+
+<script src="{{ asset('bundles/admin/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+<script src="{{ asset('bundles/admin/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('bundles/admin/dist/js/app.min.js') }}"></script>
+<script src="{{ asset('bundles/admin/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+<script src="{{ asset('bundles/admin/plugins/fastclick/fastclick.min.js') }}"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+</body>
+</html>
